@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+  int x=1;
+  for(;x==1;)
+  {
+    printf("please input a calculation formular:");
+    float num1=1.0,num2=1.0,res=1.0;
+    char ch;
+    scanf("%f%c%f",&num1,&ch,&num2);
+    switch(ch)
+    {
+      case '+':res=num1+num2;printf("%f %c %f = %f\n",num1,ch,num2,res);break;
+      case '-':res=num1-num2;printf("%f %c %f = %f\n",num1,ch,num2,res);break;
+      case '*':res=num1*num2;printf("%f %c %f = %f\n",num1,ch,num2,res);break;
+      case '/':
+        if(num2==0)
+          printf("error!\n");
+        else
+        {
+          res=num1/num2;
+          printf("%f %c %f = %f\n",num1,ch,num2,res);
+        }
+        break;
+      default:printf("please input a right formular!\n");break;
+    }
+    printf("countinue? input \"1\" for \"yes\" and \"0\" for \"no\"\n");
+    scanf("%d",&x);
+  }  
+  return 1;
+}
