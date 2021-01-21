@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+  printf("please input a integer");
+  int x=0;
+  scanf("%d",&x);
+  if(x&1==1)
+    printf("%d is a odd number\n");
+  else
+    printf("%d is a eeven number\n");
+  return 1;
+}
